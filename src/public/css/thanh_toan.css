@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body
+{
+    background: #f2f2f2 url(https://vietjetairs.com.vn/userupload/hinhanh/hinhnen2018.png/) no-repeat fixed 0 0 / cover;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.content_body
+{
+    max-width: 1080px;
+    width: 1080px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.containerwhite 
+{
+    margin: auto auto 10px;
+}
+
+.head-title1 
+{
+    color: #e00;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1px 0 4px;
+    text-transform: uppercase;
+}   
+.method_payment_div
+{
+    width: 100%;
+    background: #fff;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black
+}
+
+.payment_content 
+{
+    cursor: pointer;
+    width:100%;
+}
+
+.payment_content h5
+{
+    color:red;
+    font-size: 14px;
+}
+
+.payment_content span
+{
+    color:#666666;
+    font-size: 14px;
+}
+
+input.radio_button
+{
+    margin: 1rem 1.5rem 0rem 0.5rem;
+    cursor: pointer;
+}
+
+.xac-nhan-button {
+    background: #ff5a60 none no-repeat scroll;
+    border: 0 none;
+    border-radius: 3px;
+    color: #ffffff;
+    float: right;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    padding: 5px 15px;
+    text-shadow: 2px 1px rgba(1, 1, 1, 0.22);
+    text-transform: uppercase;
+}

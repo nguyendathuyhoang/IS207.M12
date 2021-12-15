@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <!-- <link rel="stylesheet" href="style_GN.css"> -->
+  <link rel="stylesheet" href="/css/style_GN.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <h3>Mua hành lý</h3>
+    </div>
+    <div class="row justify-content-center">
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-6h4g" colspan="2">Gói hành lý ký gửi</th>
+            <th class="tg-6h4g">Bảng giá</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-gucy" rowspan="3">Mua tại sân bay (trong vòng 3 giờ so với giờ khởi hành)</td>
+            <td class="tg-9wq8">Gói hành lý 15kg mua tại sân bay <br>(trên 15kg, mỗi kg vượt được tính theo phí hành lý
+              quá cước)</td>
+            <td class="tg-9wq8">300,000 VND</td>
+          </tr>
+          <tr>
+            <td class="tg-9wq8">Gói hành lý 20kg mua tại sân bay<br>(trên 20kg, mỗi kg vượt được tính theo phí hành lý
+              quá cước)</td>
+            <td class="tg-9wq8">Không áp dụng</td>
+          </tr>
+          <tr>
+            <td class="tg-9wq8">Hành lý quá cước (tính theo mỗi kg)</td>
+            <td class="tg-9wq8">40,000 VND</td>
+          </tr>
+          <tr>
+            <td class="tg-ix2u" rowspan="4">Mua trước qua website/callcenter/đại lý/phòng vé</td>
+            <td class="tg-9wq8">15kg</td>
+            <td class="tg-9wq8">180,000 VND</td>
+          </tr>
+          <tr>
+            <td class="tg-9wq8">20kg</td>
+            <td class="tg-9wq8">210,000 VND</td>
+          </tr>
+          <tr>
+            <td class="tg-9wq8">25kg</td>
+            <td class="tg-9wq8">270,000 VND</td>
+          </tr>
+          <tr>
+            <td class="tg-9wq8">30kg</td>
+            <td class="tg-9wq8">380,000 VND</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row justify-content-center">
+      <label class="my-1 mr-2" for="baggage_weight">Chọn khối lượng hành lý</label>
+      <select id="baggage_weight">
+        <option selected>Chọn</option>
+        <option value="1">15kg</option>
+        <option value="2">20kg</option>
+        <option value="3">25kg</option>
+        <option value="3">30kg</option>
+      </select>
+    </div>
+    <div class="row justify-content-center">
+      <h3>Thực đơn món chính</h3>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="option1" value="option1">
+          <label class="form-check-label" for="option1">
+            <figure class="figure">
+              <img src="/image/uncle_chin.jpg" class="figure-img img-fluid rounded" alt="Uncle Chin">
+              <figcaption class="figure-caption">Cơm gà Uncle Chin</figcaption>
+              <figcaption class="figure-caption">Giá suất ăn: 80000 VND</figcaption>
+            </figure>
+          </label>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="option2" value="option2">
+          <label class="form-check-label" for="option2">
+            <figure class="figure">
+              <img src="/image/thai_curry.jpg" class="figure-img img-fluid rounded" alt="thai_curry">
+              <figcaption class="figure-caption">Cơm cà ri xanh Thái Lan</figcaption>
+              <figcaption class="figure-caption">Giá suất ăn: 120000 VND</figcaption>
+            </figure>
+          </label>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="option3" value="option3">
+          <label class="form-check-label" for="option3">
+            <figure class="figure">
+              <img src="/image/roti_jala.jpg" class="figure-img img-fluid rounded" alt="roti_jala">
+              <figcaption class="figure-caption">Bánh Roti Jala ăn kèm gà Curry</figcaption>
+              <figcaption class="figure-caption">Giá suất ăn: 120000 VND</figcaption>
+            </figure>
+          </label>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="option4" value="option4">
+          <label class="form-check-label" for="option4">
+            <figure class="figure">
+              <img src="/image/biryani.jpg" class="figure-img img-fluid rounded" alt="biryani">
+              <figcaption class="figure-caption">Cơm Biryani Rau Hyderabadi</figcaption>
+              <figcaption class="figure-caption">Giá suất ăn: 115000 VND</figcaption>
+            </figure>
+          </label>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="option5" value="option5">
+          <label class="form-check-label" for="option5">
+            <figure class="figure">
+              <img src="/image/bukhara.jpg" class="figure-img img-fluid rounded" alt="bukhara">
+              <figcaption class="figure-caption">Cơm gà Bukhara</figcaption>
+              <figcaption class="figure-caption">Giá suất ăn: 90000 VND</figcaption>
+            </figure>
+          </label>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="option6" value="option6">
+          <label class="form-check-label" for="option6">
+            <figure class="figure">
+              <img src="/image/pad_thai.jpg" class="figure-img img-fluid rounded" alt="pad_thai">
+              <figcaption class="figure-caption">Pad Thái cuộn trứng</figcaption>
+              <figcaption class="figure-caption">Giá suất ăn: 100000 VND</figcaption>
+            </figure>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <h3>Nước uống và đồ ăn nhẹ</h3>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="option1_1" value="option1_1">
+          <label class="form-check-label" for="option1_1">
+            <figure class="figure">
+              <img src="/image/tra_sua.jpg" class="figure-img img-fluid rounded" alt="tra_sua">
+              <figcaption class="figure-caption">Trà sữa Thái Boba</figcaption>
+              <figcaption class="figure-caption">Giá suất ăn: 40000 VND</figcaption>
+            </figure>
+          </label>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="option2_1" value="option2_1">
+          <label class="form-check-label" for="option2_1">
+            <figure class="figure">
+              <img src="/image/crisps_coca.jpg" class="figure-img img-fluid rounded" alt="crisps_coca">
+              <figcaption class="figure-caption">Pringles Original Crisps 42gr + Coca Cola 330ml</figcaption>
+              <figcaption class="figure-caption">Giá suất ăn: 50000 VND</figcaption>
+            </figure>
+          </label>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="option3_1" value="optio3_1">
+          <label class="form-check-label" for="option3_1">
+            <figure class="figure">
+              <img src="/image/do_an_nhe.jpg" class="figure-img img-fluid rounded" alt="do_an_nhe">
+              <figcaption class="figure-caption">Hộp đồ ăn nhẹ</figcaption>
+              <figcaption class="figure-caption">Giá suất ăn: 65000 VND</figcaption>
+            </figure>
+          </label>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-outline-info btn-lg btn-block">Xác nhận</button>
+  </div>
+</body>
+
+</html>

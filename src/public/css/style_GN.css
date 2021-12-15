@@ -1,0 +1,32 @@
+#require-label::after{
+    content:"*";
+    color:red;
+}
+
+
+body {
+    background-image: url('/image/cloud.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+label {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+}
+
+/*bang gia*/
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-ix2u{background-color:#ffccc9;border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-gucy{background-color:#ffccc9;border-color:inherit;color:#333333;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-6h4g{background-color:#ffce93;border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/style_HH.css">
+</head>
+
+<body>
+  <!-- Begin of header -->
+  <nav class="navbar navbar-expand-md navbar-light bg-ligh sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-branch" href="ex.html">
+        <img src="/image/logo.svg" height="100">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="chuyenbaycuatoi.ejs">CHUYẾN BAY CỦA TÔI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="checkin.ejs">CHECK-IN ONLINE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dichvuchuyenbay_1.ejs">DỊCH VỤ CHUYẾN BAY</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End of header -->
+  <div class="container-fluid padding">
+    <div class="row padding">
+      <div class="col-md-12 col-lg-6">
+        <div id="slides" class="carousel slide" data-ride="carousel">
+          <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+            <li data-target="#slides" data-slide-to="3"></li>
+          </ul>
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/image/item0.jpg" height="500" width="500" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img src="/image/item1.jpg" height="500" width="500" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img src="/image/item2.jpg" height="500" width="500" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img src="/image/item3.jpg" height="500" width="500" alt="Fourth slide">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="container">
+          <div class="text-center">
+            <h3>Đặt vé máy bay</h3>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="typeFlight" id="oneFlight" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Một chiều</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="typeFlight" id="roundTrip" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Khứ hồi</label>
+          </div>
+          <select class="custom-select">
+            <option selected>TP. Hồ Chí Minh</option>
+            <option>Hà Nội</option>
+            <option>Huế</option>
+            <option>Đà Nẵng</option>
+            <option>Nha Trang</option>
+            <option>Phú Quốc</option>
+            <option>Đà Lạt</option>
+            <option>Điện Biên</option>
+            <option>Hải Phòng</option>
+          </select><br><br>
+          <select class="custom-select">
+            <option selected>TP. Hồ Chí Minh</option>
+            <option>Hà Nội</option>
+            <option>Huế</option>
+            <option>Đà Nẵng</option>
+            <option>Nha Trang</option>
+            <option>Phú Quốc</option>
+            <option>Đà Lạt</option>
+            <option>Điện Biên</option>
+            <option>Hải Phòng</option>
+          </select><br><br>
+          <diV class="row padding">
+            <div class="col-6">
+              <p>Ngày đi</p>
+            </div>
+            <div class="col-6">
+              <p>Ngày về</p>
+            </div>
+          </diV>
+          <div class="row padding">
+            <div class='col-6'>
+              <input type="datetime-local">
+            </div>
+            <div class='col-6'>
+              <input type="datetime-local">
+            </div>
+          </div><br>
+          <div class="text-center">
+            <a href="ketquatimchuyenbay.html">
+              <button type="button" class="btn btn-warning">Tìm chuyến bay</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Begin of footer -->
+  <footer>
+    <div class="container-fluid padding">
+      <div class='row text-center'>
+        <div class="col-lg-12">
+          <hr class="light">
+          <p>Copyright &copy; <nbsp> 2021 HKTravel Service Trading Co.,LTD</nbsp>
+          </p>
+          <p>Ad 1: 29C Cộng Hòa 3, Q. Tân Phú, TP.HCM - Ad 2: 246/9B23 Xô Viết Nghệ Tĩnh, Q. Bình Thạnh, TP.HCM</p>
+          <p>www.vietjetairs.com.vn | Email: ticket@vietjetonline.com</p>
+        </div>
+      </div>
+  </footer>
+  <!-- End of header -->
+</body>
+
+</html>
