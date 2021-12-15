@@ -55,10 +55,7 @@ let findFlight = async (req, res) => {
     return res.render('find.ejs', { dataFlight: flight[0] })
 }
 
-let createService = (req, res) => {
-    return res.render('dichvuchuyenbay_1.ejs')
-}
 
 module.exports = {
-    getHomepage, getDetailPage, createNewFlight, deleteFlight, getEditPage, postUpdateFlight, createService
+    getHomepage, getDetailPage, createNewFlight, deleteFlight, getEditPage, postUpdateFlight
 }

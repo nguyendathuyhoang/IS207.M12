@@ -66,6 +66,7 @@ const initWebRoute = (app) => {
     router.get('/dichvuchuyenbay_2.ejs', (req, res) => {
         res.render('dichvuchuyenbay_2.ejs')
     })
+
     return app.use('/', router)
 }
 
