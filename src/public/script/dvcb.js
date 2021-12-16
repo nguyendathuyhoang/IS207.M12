@@ -67,6 +67,7 @@ $(document).ready(function(){
             contentType: 'application/json',
             success: function(res){
                 alert("Đặt dịch vụ thành công")
+                $('body').html("<p style='text-align:center; font-size:60px'>Bạn đã đặt dịch vụ thành công, hãy quay về trang chủ ^^</p>")
                 window.location = '/'
             }
         })
