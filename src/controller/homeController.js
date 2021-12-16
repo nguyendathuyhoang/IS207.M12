@@ -3,9 +3,9 @@ import pool from '../configs/connectDB';
 
 let getHomepage = async (req, res) => {
 
-    const [rows, fields] = await pool.execute('SELECT * FROM `chuyenbay`',);
+    //const [rows, fields] = await pool.execute('SELECT * FROM `chuyenbay`',);
 
-    return res.render("trangchu.ejs", { dataFlight: rows, test: 'abc string test' })
+    return res.render("trangchu.ejs")//, { dataFlight: rows, test: 'abc string test' })
 
 }
 
@@ -49,13 +49,30 @@ let postUpdateFlight = async (req, res) => {
     return res.redirect('/');
 }
 
+// let findFlight = async (req, res) => {
+//     const [rows, fields] = await pool.execute('SELECT * FROM `chuyenbay`',);
+
+
+//     let { NoiDi } = res.body;
+//     let [flight] = await pool.execute(`select * from chuyenbay where NoiDi= ?`, [NoiDi])
+//     return res.render("kqatimchuyenbay.ejs", { dataFlight: rows, test: 'abc string test' })
+// }
+
 let findFlight = async (req, res) => {
-    let NoiDi = res.params.NoiDi;
-    let [flight] = await pool.execute('select * from chuyenbay where MaChuyenBay= ?', [NoiDi])
-    return res.render('find.ejs', { dataFlight: flight[0] })
+
+    const [rows, fields] = await pool.execute('SELECT * FROM `khachhang`',);
+
+    return res.render("trangchu.ejs", { dataFlight: rows, test: '' })
+
 }
 
+let getCheckinPage = async (req, res) => {
+    const [rows, fields] = await pool.execute('SELECT * FROM `khachhang`',);
+
+    return res.render("indexthutuc.ejs", { dataClient: rows, test: 'abc string test' })
+    //return res.render("index.ejs")
+}
 
 module.exports = {
-    getHomepage, getDetailPage, createNewFlight, deleteFlight, getEditPage, postUpdateFlight
+    getHomepage, getDetailPage, createNewFlight, deleteFlight, getEditPage, postUpdateFlight, findFlight, getCheckinPage
 }

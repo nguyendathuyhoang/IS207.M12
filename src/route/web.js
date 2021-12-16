@@ -11,16 +11,15 @@ const initWebRoute = (app) => {
     // router.get('/edit-flight/:MaChuyenBay', homeController.getEditPage)
     // router.post('/update-flight', homeController.postUpdateFlight)
 
-    //mình làm tìm kiếm chuyến bay
-    // router.post('/find-flight', homeController.findFlight)
+    //mình làm tìm kiếm chuyến bay, checkin
+    //router.get('/checkin', homeController.getCheckin);
+    //router.get('/find-flight', homeController.findFlight);
+    //router.get('/checkin/flight/:MaDatCho', homeController.getCheckinPage)
 
     router.get('/about', (req, res) => {
         res.send('I am Erik')
     })
 
-    router.get('/checkin.ejs', (req, res) => {
-        res.render('checkin.ejs')
-    })
 
     router.get('/chonchongoi.ejs', (req, res) => {
         res.render('chonchongoi.ejs')
@@ -48,7 +47,7 @@ const initWebRoute = (app) => {
     })
 
     router.get('/thutuctructuyen.ejs', (req, res) => {
-        res.render('thuthuctructuyen.ejs')
+        res.render('thutuctructuyen.ejs')
     })
 
     router.get('/', (req, res) => {

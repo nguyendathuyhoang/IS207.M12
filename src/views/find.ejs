@@ -1,10 +1,10 @@
-<html lang="en">
+<!-- <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<h1>>, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_HH.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
@@ -19,20 +19,20 @@
     <div class="container-fluid padding" style="padding-top:20px; padding-left:80px">
         <div class="row padding">
             <div class="col-md-12 col-lg-6">
-                <div class="container" style="background-color: rgba(255, 255, 255, 0.5); paddi">
+                <div class="container" style="background-color: rgba(255, 255, 255, 0.5)">
                     <div class="text-center">
                         <h2>
                             <li class="fa fa-user-plus">Edit Chuyến bay</li>
                         </h2>
                     </div>
                     <form action="/find-flight" method="POST">
-                        <!-- <div class="form-group row">
+                         <div class="form-group row">
                             <label for="inputName" class="col-sm-3 col-form-label">Mã chuyến bay</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" name="MaChuyenBay"
                                     value="<%= dataFlight.MaChuyenBay %>" placeholder="Nhập mã chuyến bay">
                             </div>
-                        </div> -->
+                        </div> 
                         <div class="form-group row">
                             <label for="inputPassword" class="col-sm-3 col-form-label">Giờ khởi hành</label>
                             <div class="col-sm-8">
@@ -81,6 +81,98 @@
 
         </div>
     </div>
+</body>
+
+</html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<h1>>, initial-scale=1.0">
+    <title>ĐỒ ÁN WEB HỌC TRÊN MẠNG</title>
+    <link rel="stylesheet" href="/css/style_HH.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-ligh sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-branch" href="#">
+                <img src="/image/logo.svg" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">CHUYẾN BAY CỦA TÔI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CHECK-IN ONLINE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DỊCH VỤ CHUYẾN BAY</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid padding">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">MaChuyenBay</th>
+                    <th scope="col">GioKhoiHanh</th>
+                    <th scope="col">GioDen</th>
+                    <th scope="col">NgayDi</th>
+                    <th scope="col">NoiDi</th>
+                    <th scope="col">NoiDen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--%= dataFlight.length%-->
+                <%= test %>
+                    <% for(let i=0; i < dataFlight.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= dataFlight[i].MaChuyenBay %>
+                            </td>
+                            <td>
+                                <%= dataFlight[i].GioKhoiHanh %>
+                            </td>
+                            <td>
+                                <%= dataFlight[i].GioDen %>
+                            </td>
+                            <td>
+                                <%= dataFlight[i].NgayDi %>
+                            </td>
+                            <td>
+                                <%= dataFlight[i].NoiDi %>
+                            </td>
+                            <td>
+                                <%= dataFlight[i].NoiDen %>
+                            </td>
+                            <td>
+                                <form action="/delete-flight/<%= dataFlight[i].NoiDi %>" method="POST">
+                                    <input type="text" hidden value="<%= dataFlight[i].NoiDi %>" name="NoiDi">
+                                    <button type="submit" class="btn btn-success">Tìm kiếm</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% } %>
+            </tbody>
+        </table>
+    </div>
+
+
 </body>
 
 </html>

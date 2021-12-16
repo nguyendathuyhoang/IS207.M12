@@ -80,6 +80,14 @@
             <input class="form-check-input" type="radio" name="typeFlight" id="roundTrip" value="option2">
             <label class="form-check-label" for="inlineRadio2">Khứ hồi</label>
           </div>
+
+          <!-- <form action='/find-flight' method="GET">
+          <div class="form-group row">
+            <label for="inputPlace" class="col-sm-3 col-form-label">Nơi đi</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="NoiDi" value="" placeholder="Nhập nơi đi">
+            </div>
+          </div> -->
           <select class="custom-select">
             <option selected>TP. Hồ Chí Minh</option>
             <option>Hà Nội</option>
@@ -119,10 +127,12 @@
             </div>
           </div><br>
           <div class="text-center">
-            <a href="ketquatimchuyenbay.html">
-              <button type="button" class="btn btn-warning">Tìm chuyến bay</button>
-            </a>
+            <form action='find-flight' method='POST'>
+              <button type="submit" class="btn btn-warning">Tìm chuyến bay</button>
+            </form>
           </div>
+          <!-- <button type="submit" class="btn btn-warning">Tìm chuyến bay</button>
+          </form> -->
         </div>
       </div>
     </div>
