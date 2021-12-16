@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <!-- <link rel="stylesheet" href="style_GN.css"> -->
     <link rel="stylesheet" href="/css/style_GN.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/dvcb.js"></script>
+    <Title>Dịch vụ chuyến bay</Title>
 </head>
 
 <body>
@@ -16,23 +19,26 @@
             <div class="col-4" style="background-color: rgb(248, 234, 248); padding-top: 50px;">
                 <h5>Dịch vụ chuyến bay</h5>
                 <p>Bạn muốn mua thêm dịch vụ hành lý, suất ăn..., vui lòng điền thông tin bên dưới:</p>
-                <form>
+                <form id="login">
                     <div class="form-group">
                         <div class="form-group row">
                             <label id="require-label" for="madatcho" class="col-sm-4 col-form-label">Mã đặt chỗ</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="madatcho">
+                                <input type="text" class="form-control" id="madatcho" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label id="require-label" for="hovaten" class="col-sm-4 col-form-label">Họ và tên</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="hovaten">
+                                <input type="text" class="form-control" id="hovaten" required>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-warning">Tiếp theo</button>
+                        <button type="submit" class="btn btn-warning">Tiếp theo</button>
                     </div>
                 </form>
+                <div id="check_result" style="color: red;">
+
+                </div>
             </div>
             <div class="col">
                 <img src="/image/girl.jpg" class="rounded" alt="Responsive Images">

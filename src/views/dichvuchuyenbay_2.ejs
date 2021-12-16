@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
   <!-- <link rel="stylesheet" href="style_GN.css"> -->
   <link rel="stylesheet" href="/css/style_GN.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/script/dvcb.js"></script>
 </head>
 
 <body>
@@ -62,11 +64,11 @@
     <div class="row justify-content-center">
       <label class="my-1 mr-2" for="baggage_weight">Chọn khối lượng hành lý</label>
       <select id="baggage_weight">
-        <option selected>Chọn</option>
+        <option selected value="0">Chọn</option>
         <option value="1">15kg</option>
         <option value="2">20kg</option>
         <option value="3">25kg</option>
-        <option value="3">30kg</option>
+        <option value="4">30kg</option>
       </select>
     </div>
     <div class="row justify-content-center">
@@ -176,7 +178,7 @@
       </div>
       <div class="col-4">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="option3_1" value="optio3_1">
+          <input class="form-check-input" type="checkbox" id="option3_1" value="option3_1">
           <label class="form-check-label" for="option3_1">
             <figure class="figure">
               <img src="/image/do_an_nhe.jpg" class="figure-img img-fluid rounded" alt="do_an_nhe">
@@ -187,7 +189,8 @@
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-outline-info btn-lg btn-block">Xác nhận</button>
+    <p id="total" style="font-size: 40px; text-align: end; color: #eb1357;">Tổng cộng: 0đ</p>
+    <button type="button" class="btn btn-outline-info btn-lg btn-block" id="submit">Xác nhận</button>
   </div>
 </body>
 

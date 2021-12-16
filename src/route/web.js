@@ -1,5 +1,8 @@
 import express from "express";
 import homeController from '../controller/homeController';
+import dvcbController from '../controller/dvcbController';
+const bodyparser = require('body-parser')
+const jsonParser = bodyparser.json();
 
 let router = express.Router();
 
@@ -58,14 +61,18 @@ const initWebRoute = (app) => {
         res.render('xac_nhan_thanh_toan.ejs')
     })
 
+    /*dich vu chuyen bay*/
     router.get('/dichvuchuyenbay_1.ejs', (req, res) => {
         res.render('dichvuchuyenbay_1.ejs')
     })
+    router.post('/dvcb_login', jsonParser, dvcbController.check_login)
+    router.post('/dvcb_preorder', jsonParser, dvcbController.add_service)
 
-    router.get('/dichvuchuyenbay_2.ejs', (req, res) => {
+    router.get('/dichvuchuyenbay_2.ejs/code/:code', (req, res) => {
         res.render('dichvuchuyenbay_2.ejs')
     })
 
+    /*router*/
     return app.use('/', router)
 }
 
