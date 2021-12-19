@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="input_thong_tin_khach_hang.css">
+    <title>Xác nhận thông tin</title>
+</head>
+<body>
+    <div class="d-flex justify-content-center">
+        <div class="content_body">
+            <h1 class="head-title1">
+                Thông tin người liên hệ
+            </h1>
+            <p class="form_instructions">- Quý khách vui lòng nhập thông tin liên hệ, thông tin hành khách,
+             chọn phương thức thanh toán để tiếp tục đặt vé.<br> - <span class="red_span">(*)</span> ô bắt buộc nhập.
+            </p>
+            <div class="div_form_container">
+                <form>
+                    <div class="form-group row div_form">
+                        <label class="col-3 col-form-label" for="ten_KH">Họ và tên (*)</label>
+                        <div class="col-9">
+                            <input class="form-control" id="ten_KH" type="text" placeholder="Ví dụ: Nguyễn Thành Đạt">
+                        </div>
+                    </div>
+                    <div class="form-group row div_form">
+                        <label class="col-3 col-form-label" for="sdt">Số điện thoại (*)</label>
+                        <div class="col-9">
+                            <input class="form-control" id="sdt" type="text" placeholder="Ví dụ: 028 6547 7962">
+                        </div>
+                    </div>
+                    <div class="form-group row div_form">
+                        <label class="col-3 col-form-label" for="ngay_sinh">Ngày sinh (*)</label>
+                        <div class="col-9">
+                            <input class="form-control" id="ngay_sinh" type="date">
+                        </div>
+                    </div>
+                    <div class="form-group row div_form">
+                        <label class="col-3 col-form-label" for="email">Email (*)</label>
+                        <div class="col-9">
+                            <input class="form-control" id="email" type="text" placeholder="Ví dụ: thanhdatnguyen@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group row div_form">
+                        <label class="col-3 col-form-label" for="dia_chi">Địa chỉ</label>
+                        <div class="col-9">
+                            <textarea class="form-control" id="dia_chi" rows="5"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
