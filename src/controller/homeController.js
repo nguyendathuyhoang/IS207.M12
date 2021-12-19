@@ -3,9 +3,9 @@ import pool from '../configs/connectDB';
 
 let getHomepage = async (req, res) => {
 
-    //const [rows, fields] = await pool.execute('SELECT * FROM `chuyenbay`',);
+    const [rows, fields] = await pool.execute('SELECT * FROM `chuyenbay`',);
 
-    return res.render("trangchu.ejs")//, { dataFlight: rows, test: 'abc string test' })
+    return res.render("trangchu.ejs", { dataFlight: rows, test: '' })
 
 }
 

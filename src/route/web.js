@@ -8,11 +8,12 @@ let router = express.Router();
 
 const initWebRoute = (app) => {
     router.get('/', homeController.getHomepage);
-    // router.get('/detail/flight/:MaChuyenBay', homeController.getDetailPage)
-    // router.post('/service', homeController.createService)
-    // router.post('/delete-flight', homeController.deleteFlight)
-    // router.get('/edit-flight/:MaChuyenBay', homeController.getEditPage)
-    // router.post('/update-flight', homeController.postUpdateFlight)
+    router.get('/detail/flight/:MaChuyenBay', homeController.getDetailPage)
+    router.post('/create-new-flight', homeController.createNewFlight)
+    //router.post('/service', homeController.createService)
+    router.post('/delete-flight', homeController.deleteFlight)
+    router.get('/edit-flight/:MaChuyenBay', homeController.getEditPage)
+    router.post('/update-flight', homeController.postUpdateFlight)
 
     //mình làm tìm kiếm chuyến bay, checkin
     //router.get('/checkin', homeController.getCheckin);
@@ -26,6 +27,10 @@ const initWebRoute = (app) => {
 
     router.get('/chonchongoi.ejs', (req, res) => {
         res.render('chonchongoi.ejs')
+    })
+
+    router.get('/checkin.ejs', (req, res) => {
+        res.render('checkin.ejs')
     })
 
     router.get('/chuyenbaycuatoi.ejs', (req, res) => {
@@ -53,12 +58,16 @@ const initWebRoute = (app) => {
         res.render('thutuctructuyen.ejs')
     })
 
-    router.get('/', (req, res) => {
+    router.get('/trangchu.ejs', (req, res) => {
         res.render('trangchu.ejs')
     })
 
     router.get('/xac_nhan_thanh_toan.ejs', (req, res) => {
         res.render('xac_nhan_thanh_toan.ejs')
+    })
+
+    router.get('/Input_thong_tin_khach_hang.ejs', (req, res) => {
+        res.render('Input_thong_tin_khach_hang.ejs')
     })
 
     /*dich vu chuyen bay*/

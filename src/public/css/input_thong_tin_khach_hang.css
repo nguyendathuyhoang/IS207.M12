@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body
+{
+    background: #f2f2f2 url(https://vietjetairs.com.vn/userupload/hinhanh/hinhnen2018.png/) no-repeat fixed 0 0/ cover;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.content_body
+{
+    max-width: 1080px;
+    width: 1080px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.head-title1 
+{
+    color: #e00;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1px 0 4px;
+    text-transform: uppercase;
+}   
+
+.form_instructions
+{
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.form_instructions .red_span
+{
+    color: red;
+}
+
+.div_form_container
+{
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.div_form
+{
+    margin-top: 10px;
+}
