@@ -31,7 +31,8 @@ let check_login = async (req, res) => {
 let add_service = async (req, res) => {
     let weight = req.body.weight
     let food = req.body.food.join('')
-    console.log(food)
+    if(food.length==0)
+        food=null;
     let code = req.body.code
     let service_code = makeid()
     let querystring = "select * from dichvuchuyenbay"
