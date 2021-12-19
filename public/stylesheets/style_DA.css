@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-image: url("https://media.istockphoto.com/photos/light-blue-sky-with-clouds-picture-id518867574?k=20&m=518867574&s=170667a&w=0&h=4u3qVefgp02QDQJYSWeRPgAvknmJYk0wPRtPbNduru4%3D&fbclid=IwAR1cYSh3mRcFYJfSqokXFA8AVVbUM1Rs5KXa89CrVbct1Y9z31hv6U4kD-c")  !important;
+    background-size:cover;
+}
+.navbar{
+    background-color:gold;
+}
+.carousel-inner img {
+    width: 100%;
+}
+.container-fluid .row{
+    padding-top:10px;
+}
+.table-color{
+	background-color: whitesmoke;
+}
+h3{
+    color: yellow;
+}
+.container .custom-select{
+    padding-bottom: 10px;
+}
+.col-6{
+    color: aliceblue;
+}
+/*.col-6{
+    padding-right: 10px;
+}*/
