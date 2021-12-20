@@ -41,8 +41,8 @@ let add_service = async (req, res) => {
     {
         if(customer[i].MaDatCho==req.body.code)
         {
-            let queryupdate = 'update dichvuchuyenbay set SoKy='+weight+', LoaiDoAn='+food+' where MaDatCho='+code;
-            await pool.execute(queryupdate)
+            let queryupdate = 'update dichvuchuyenbay set SoKy=?, LoaiDoAn=? where MaDatCho=?';
+            await pool.execute(queryupdate,[weight,food,code])
             res.send({respond:"OK"})
             return;
         }
