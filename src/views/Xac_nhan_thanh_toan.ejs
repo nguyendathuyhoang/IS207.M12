@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- <link rel="stylesheet" href="xac_nhan_clicked.css"> -->
-    <link rel="stylesheet" href="/css/xac_nhan_clicked.css">
+    <link rel="stylesheet" href="/css/xac_nhan_thanhtoan.css">
+    <link rel="icon" type="image/png" href="/image/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='/script/hoadon.js'></script>
     <title>Xác nhận thông tin</title>
 </head>
 
@@ -21,12 +24,14 @@
                         <h1 class="head-title1">
                             Cảm ơn bạn đã đặt vé tại ... | Đặt vé online - Ưu đãi bất ngờ
                         </h1>
-                        <div class="div_1"></div>
+                        <div class="div_1">
+                            <p style="text-align: center; font-size: 35px; color: white;">Thông tin đơn hàng</p>
+                        </div>
                         <div class="div_2">
-                            <p><b>Mã đặt chỗ:</b></p>
-                            <p><b>Tổng tiền:</b></p>
-                            <p><b>Ngày đặt:</b></p>
-                            <p><b>Phương thức thanh toán:</b></p>
+                            <p id="MaDatCho"><b>Mã đặt chỗ:</b></p>
+                            <p id="TongTien"><b>Tổng tiền:</b></p>
+                            <p id="NgayDat"><b>Ngày đặt:</b></p>
+                            <p id=PhuongThuc><b>Phương thức thanh toán:</b></p>
                         </div>
                         <div class="div_3">
                             <p>Quý khách lưu ý!</p>
@@ -46,13 +51,19 @@
                             <div class="dec_1">Thông tin hành trình</div>
                             <div class="dec_2"></div>
                         </div>
+                        <div id="ChuyenBay">
+                        </div>
+                        <div class="dec d-flex">
+                            <div class="dec_1" style="font-weight: lighter;">Hành khách</div>
+                            <div class="dec_2" style="background: #cbedf5; font-size: 20px; text-align: center;" id="HanhKhach"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 
 </html>
