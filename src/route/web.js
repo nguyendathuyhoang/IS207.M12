@@ -2,6 +2,7 @@ import express from "express";
 import homeController from '../controller/homeController';
 import dvcbController from '../controller/dvcbController';
 import muaveController from'../controller/muaveController';
+import cbctController from '../controller/cbctController';
 const bodyparser = require('body-parser')
 const jsonParser = bodyparser.json();
 
@@ -34,7 +35,11 @@ const initWebRoute = (app) => {
     router.get('/chuyenbaycuatoi.ejs', (req, res) => {
         res.render('chuyenbaycuatoi.ejs')
     })
-
+    
+    router.get('/nhaplaiform', (req, res) => {
+        res.render('nhaplaiformCBCT.ejs', { title: 'Chuyến bay của tôi' })
+    })
+    
     router.get('/ketquachonghe.ejs', (req, res) => {
         res.render('ketquachonghe.ejs')
     })
@@ -84,7 +89,9 @@ const initWebRoute = (app) => {
     router.get('/dichvuchuyenbay_2.ejs/code/:code', (req, res) => {
         res.render('dichvuchuyenbay_2.ejs')
     })
-
+    /*Chuyen bay cua toi*/
+    router.post('/chuyenbaycuatoi', cbctController)
+    
     /*router*/
     return app.use('/', router)
 }
