@@ -2,20 +2,20 @@
 <html>
 
 <head>
+  <title><%= title %></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <!-- <link href="style_DA.css" rel="stylesheet"> -->
-  <link rel="icon" type="image/png" href="/image/favicon.png">
   <link rel="stylesheet" href="/css/style_DA.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-ligh sticky-top">
     <div class="container-fluid">
-      <a class="navbar-branch" href="ex.ejs">
+      <a class="navbar-branch" href="/">
         <img src="/image/logo.svg" height="100">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -41,20 +41,92 @@
     <table class="table">
       <th>
         <h2 style="text-align: center;">THÔNG TIN HÀNH KHÁCH</h2>
-        <p style="font-weight:normal">Họ và tên:</p>
-        <p style="font-weight:normal">Mã đặt chỗ:</p>
-        <p style="font-weight:normal">Số điện thoại:</p>
-        <p style="font-weight:normal">Mã chuyến bay:</p>
-        <p style="font-weight:normal">Điểm đi - giờ bay:</p>
-        <p style="font-weight:normal">Điểm đến - giờ đến:</p>
-        <p style="font-weight:normal">Dịch vụ đã đăng ký:</p>
+        <p style="font-weight:normal"><b>Họ và tên:</b> <%= dataKH[0].HoTen %> </p>
+        <p style="font-weight:normal"><b>Mã đặt chỗ:</b> <%= dataKH[0].MaDatCho %> </p>
+        <p style="font-weight:normal"><b>Số điện thoại:</b> <%= dataKH[0].SDT %> </p>
+        <p style="font-weight:normal"><b>Mã chuyến bay:</b> <%= maCB %> </p>
+        <p style="font-weight:normal"><b>Điểm đi - giờ bay:</b> <%= dataCB[0].NoiDi %> - <%= dataCB[0].GioKhoiHanh %> </p>
+        <p style="font-weight:normal"><b>Điểm đến - giờ đến:</b> <%= dataCB[0].NoiDen %> - <%= dataCB[0].GioDen %> </p>
+        <p style="font-weight:normal"><b>Dịch vụ đã đăng ký:</b> 
+          <% if((dataDV[0].LoaiDoAn == '') && (dataDV[0].SoKy == 0))
+              { 
+          %>
+                Không đăng ký dịch vụ.
+          <%  
+              } 
+          %></p>
 
+        <% if(dataDV[0].SoKy != 0)
+            {
+              var soKg = (dataDV[0].SoKy) * 5 + 10;
+        %>
+              <p style="font-weight:normal; margin-left: 20px"><b>+ Khối lượng hành lý bạn đã đăng ký thêm:</b> <%= soKg %>  Kg.</p>
+        <%
+            }
+        %>
+
+        <% if(dataDV[0].LoaiDoAn != '')
+            {
+        %>      
+              <p style="font-weight:normal; margin-left: 20px"><b>+ Loại món ăn hoặc đồ uống bạn bạn đã chọn:</b> 
+            
+        <%
+              var loai = dataDV[0].LoaiDoAn;
+              var arrLoai = loai.split('');
+              arrLoai.forEach(function(motPhanTu)
+              {
+                switch (motPhanTu) 
+                {
+                  case '1':
+        %>
+                   Cơm gà Uncle Chin; 
+        <%
+                   break;
+                  case '2':
+        %>
+                   Cơm cà ri xanh Thái Lan; 
+        <%
+                    break;
+                  case '3':
+        %> 
+                   Bánh Roti Jala ăn kèm gà Curry;
+        <%
+                    break;
+                  case '4':
+        %>
+                   Cơm Biryani Rau Hyderabadi;
+        <%
+                    break;
+                  case '5':
+        %>
+                   Cơm gà Bukhara; 
+        <%
+                  case '6':
+        %>
+                   Pad Thái cuộn trứng; 
+        <%
+                  case '7':
+        %>
+                   Trà sữa Thái Boba; 
+        <%
+                  case '8':
+        %>
+                   Pringles Original Crisps 42gr + Coca Cola 330ml; 
+        <%
+                  case '9':
+        %>
+                   Hộp đồ ăn nhẹ; 
+        <%
+                    break;
+                  default:
+                    break;
+                }
+              })
+            }
+        %>    </p>
       </th>
     </table>
   </div>
-
-
-
 
 
   <footer>
