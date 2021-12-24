@@ -9,7 +9,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<!-- <link href="style_DA.css" rel="stylesheet"> -->
-	<link rel="icon" type="image/png" href="/image/favicon.png"/>
+	<link rel="icon" type="image/png" href="/image/favicon.png" />
 	<link rel="stylesheet" href="/css/style_DA.css">
 </head>
 
@@ -47,7 +47,7 @@
 					CHUYẾN BAY QUA WEB TẠI ĐÂY</p>
 				<p style="color:#F70D1A; font-weight:normal">Sẵn sàng cho chuyến bay vui vẻ, thoải mái cùng Vietjet, Bạn
 					có thể làm thủ tục chuyến bay trực tuyến nhanh chóng, tiện lợi, đơn giản.</p>
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col">
 						<p style="font-weight:normal;"> Mã đặt chỗ (*):</p>
 						<input type="text" class="form-control" name="MaDatCho">
@@ -56,9 +56,23 @@
 						<p style="font-weight:normal;"> Họ và tên (*):</p>
 						<input type="text" class="form-control" placeholder="Nguyen Van A" name="HoTen">
 					</div>
-				</div>
+				</div> 
 				<a class="btn btn-warning btn-sm rounded" role="button" style="color:black;" class="nav-link active"
-					href="thutuctructuyen.ejs">Xem chuyến bay</a>
+					href="thutuctructuyen.ejs">Xem chuyến bay</a> -->
+				<form action='checkinOnline' method="post">
+					<div class="row">
+						<div class="col">
+							<p style="font-weight:normal;"> Mã đặt chỗ (*):</p>
+							<input type="text" class="form-control" name="MaDatCho">
+						</div>
+						<div class="col">
+							<p style="font-weight:normal;"> Họ và tên (*):</p>
+							<input type="text" class="form-control" placeholder="Nguyen Van A" name="HoTen">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-warning btn-sm rounded" id='checkinbtn'>Xem chuyến bay</button>
+				</form>
+
 			</th>
 		</table>
 	</div>

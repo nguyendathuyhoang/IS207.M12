@@ -1,8 +1,11 @@
 import express from "express";
 import homeController from '../controller/homeController';
 import dvcbController from '../controller/dvcbController';
-import muaveController from'../controller/muaveController';
+import muaveController from '../controller/muaveController';
 import cbctController from '../controller/cbctController';
+import checkinController from '../controller/checkinController';
+import chongheController from '../controller/chongheController';
+
 const bodyparser = require('body-parser')
 const jsonParser = bodyparser.json();
 
@@ -10,19 +13,16 @@ let router = express.Router();
 
 const initWebRoute = (app) => {
     router.get('/', homeController.getHomepage);
-    // router.get('/detail/flight/:MaChuyenBay', homeController.getDetailPage)
-    // router.post('/service', homeController.createService)
-    // router.post('/delete-flight', homeController.deleteFlight)
-    // router.get('/edit-flight/:MaChuyenBay', homeController.getEditPage)
-    // router.post('/update-flight', homeController.postUpdateFlight)
+    router.get('/quanlychuyenbay', homeController.getManagepage);
+    router.get('/detail/flight/:MaChuyenBay', homeController.getDetailPage)
+    router.post('/create-new-flight', homeController.createNewFlight)
+    //router.post('/service', homeController.createService)
+    router.post('/delete-flight', homeController.deleteFlight)
+    router.get('/edit-flight/:MaChuyenBay', homeController.getEditPage)
+    router.post('/update-flight', homeController.postUpdateFlight)
 
     //mình làm tìm kiếm chuyến bay
     // router.post('/find-flight', homeController.findFlight)
-
-    router.get('/about', (req, res) => {
-        res.send('I am Erik')
-    })
-
 
     router.get('/chonchongoi.ejs', (req, res) => {
         res.render('chonchongoi.ejs')
@@ -35,11 +35,11 @@ const initWebRoute = (app) => {
     router.get('/chuyenbaycuatoi.ejs', (req, res) => {
         res.render('chuyenbaycuatoi.ejs')
     })
-    
+
     router.get('/nhaplaiform', (req, res) => {
         res.render('nhaplaiformCBCT.ejs', { title: 'Chuyến bay của tôi' })
     })
-    
+
     router.get('/ketquachonghe.ejs', (req, res) => {
         res.render('ketquachonghe.ejs')
     })
@@ -59,7 +59,7 @@ const initWebRoute = (app) => {
     router.get('/trangchu.ejs', (req, res) => {
         res.render('trangchu.ejs')
     })
-    
+
     /*dat ve*/
     router.post('/result_flight', jsonParser, muaveController.search_flight)
 
@@ -75,9 +75,9 @@ const initWebRoute = (app) => {
         res.render('Input_thong_tin_khach_hang.ejs')
     })
 
-    router.post('/order_ticket',jsonParser,muaveController.order_ticket)
+    router.post('/order_ticket', jsonParser, muaveController.order_ticket)
 
-    router.post('/get_info_order',jsonParser,muaveController.get_info)
+    router.post('/get_info_order', jsonParser, muaveController.get_info)
 
     /*dich vu chuyen bay*/
     router.get('/dichvuchuyenbay_1.ejs', (req, res) => {
@@ -91,7 +91,13 @@ const initWebRoute = (app) => {
     })
     /*Chuyen bay cua toi*/
     router.post('/chuyenbaycuatoi', cbctController)
-    
+
+    /*Checkin-online*/
+    router.post('/checkinOnline', checkinController)
+
+    /*Chon ghe*/
+    router.post('/chonghe', chongheController)
+
     /*router*/
     return app.use('/', router)
 }
