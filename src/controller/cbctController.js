@@ -4,7 +4,7 @@ let checkCBCT = async (req, res) => {
   // const mysql = require('mysql2/promise');
   // const connection = await mysql.createConnection({host:'localhost', user: 'root', database: 'datvemaybay'});
   let inputMa = req.body.maDatCho;
-  let inputTen = req.body.hoTen;
+  let inputTen = req.body.hoTen.toLowerCase();
   let duLieuDV;
   const [duLieuKH] = await pool.execute('SELECT * FROM khachhang WHERE MaDatCho = ? And HoTen = ?', [inputMa, inputTen]);
   if(duLieuKH == '') return(res.redirect('/nhaplaiform'))
